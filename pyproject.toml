@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "cs-hash-code-m1ds"
+version = "0.1.0"
+description = "CS_Hash_code_m1ds"
+authors = ["Yasser ZIDANI and Hatim ALOUANE"]
+readme = "README.md"
+packages = [{include = "cs_hash_code_m1ds"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
