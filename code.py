@@ -34,14 +34,14 @@ class Binary:
         return len(self.engineers)   
 
 class Feature:
-    def __init__(self, services: list[Service], users: int, difficulty: int, name: str) -> None:
+    def __init__(self, services: list, users: int, difficulty: int, name: str) -> None:
         """foo feature is implemented in 3 services, its difficulty is 3
 and 100 users per day will benefit from it
 
         inputs: list of services, number of users per day will benefit from it and its difficulty.
         """
         self.name = name
-        self.services = []
+        self.services = services
         for s in services:
             self.add_service(s)
 
