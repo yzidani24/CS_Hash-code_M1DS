@@ -48,7 +48,7 @@ and 100 users per day will benefit from it
         self.users = users
         self.difficulty = difficulty
     
-    def add_service(self, service: Service) -> None:  
+    def add_service(self, service) -> None:  
         """It adds the features to the respective services where they are running 
         Return: updated list of services
         """
@@ -56,7 +56,7 @@ and 100 users per day will benefit from it
         service.add_feature(self)
     def remove_service(self, service) -> None: 
         self.services.remove(service)
-    def is_launched(self) -> Boolean:
+    def is_launched(self) -> bool :
         """Return (Boolean): features already launched
         """
         return len(self.services) == 0
