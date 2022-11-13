@@ -1,6 +1,6 @@
 # CS_Hash-code_M1DS
 
-[coverage badge](./coverage.svg)
+![coverage badge](./coverage.svg)
 Congratulations, you are going to play the finals of the Google hash code by teaming with one or two of your classmates. The objective of this project will be to collaborate to deliver a solution to the prob&lem raised as part of the edition 2021.
 Be aware that, beyond the quality of the solution you will propose, you will be evaluated on the quality of the software project you will develop. This means that you will have to organize your team to demonstrate your capability to set up a production-like software development project by showcasing the tools and methods we explored as part of the refresher in computer sciences. This includes all Git commands and best practices, GitHub online features and workflows, as well as Python tools, tests, and other libraries you will estimate as relevant for your project.
 You are expected to equally contribute to a common project and the history of the project will be investigated to understand how you have been sharing the work among you. Don’t forget that the documentation is a key asset in software engineering and your project should contain, at least, a Readme.md file reporting on your solution, the organization of your team and the resulting project, as well as code documentation. As always, your code repository should be shared with user rouvoy in order to be evaluated.
