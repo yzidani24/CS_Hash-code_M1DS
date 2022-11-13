@@ -33,7 +33,7 @@ they can be productive and launch features that make users happy.
 
 Given a number of services, a number of binaries, and a set of features to
 implement, decide how engineers should schedule their work to deliver features
-that would delight the users as much as possible.
+that would delight the users as much as possible. So we started firstly by defining the architecture of the problem.
 
 
 ## Task
