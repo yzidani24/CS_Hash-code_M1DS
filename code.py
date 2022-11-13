@@ -1,6 +1,7 @@
 #Hash code 
 
-"""we start by defining the architecture of the problem with services, features, binaries"""
+"""we start by defining the architecture of the problem with services, features, binaries""" 
+
 class Binary:
     def __init__(self, id) -> None:
         """It define a list of services, engineers and an id.
@@ -8,7 +9,7 @@ class Binary:
         self.services = []
         self.engineers = []
         self.id = id
-    
+        
     def add_engineer(self, engineer) -> None:  # pragma: no cover
         """adding engineers whome working on binary
         """
@@ -16,7 +17,7 @@ class Binary:
     
     def remove_engineer(self, engineer) -> None:  # pragma: no cover   
         self.engineers.remove(engineer)
-    
+        
     def add_service(self, service) -> None:  # pragma: no cover
         self.services.append(service)
     
@@ -75,3 +76,60 @@ class Service:
         Return: updated list of features
         """
         self.features.append(feature)
+        
+   class Task:
+    def __init__(self, type):
+        self.type = type
+
+class Engineer:
+    def __init__(self, id) -> None:
+        """It define a list of tasks, the id, the current task and the availability of an engineer.
+        Args:
+        self represents the instance of the class
+        id
+        """
+        self.id = id
+        self.tasks = []
+        self.current_task = None
+        self.is_available = True 
+
+"""An engineer can choose any binary Bj and implement a feature Fi in all relevant services in that binary at once.
+If an engineer works on a binary Bj to implement a feature Fi this work will require
+DFi + RBj + CBj days, where:
+"""
+
+class ImplementFeature(Task):
+    def __init__(self, feature: Feature, binary: Binary, engineer: Engineer) -> None:
+        """It recalls the feature, binary, engineer classes.
+        """
+        self.feature = feature
+        self.binary = binary
+        self.engineer = engineer
+        self.total_days = self.compute_difficulty()
+        self.remaining_days = self.total_days
+        self.engineer.is_available = False
+        self.binary.engineers.append(engineer)
+        self.engineer.tasks.append(self)
+        self.engineer.current_task = self
+    
+    def compute_difficulty(self) -> int:
+        """It  returns the result obtained by the calculation of difficulty to implement a feature
+        """
+        return self.feature.difficulty + len(self.binary.services) + len(self.binary.engineers)
+    
+class Wait(Task):    
+    def __init__(self, days: int, engineer: Engineer) -> None:
+        """It updates the remaining working days and the total days.
+        """
+        self.engineer = engineer
+        
+        self.engineer.is_available = False
+
+        self.total_days = days
+        self.remaining_days = self.total_days
+
+        self.engineer.tasks.append(self)
+        self.engineer.current_task = self
+
+
+
