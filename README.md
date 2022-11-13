@@ -2,7 +2,8 @@
 
 ![coverage badge](./coverage.svg)
 
-
+# Website name 
+https://hatim-alouane.github.io/CS_Hash-code_M1DS/
 
 
 Congratulations, you are going to play the finals of the Google hash code by teaming with one or two of your classmates. The objective of this project will be to collaborate to deliver a solution to the prob&lem raised as part of the edition 2021.
