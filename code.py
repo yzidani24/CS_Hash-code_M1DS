@@ -24,15 +24,7 @@ class Binary:
     def remove_service(self, service) -> None:  # pragma: no cover
         self.services.remove(service)
     
-    def get_n_services(self) -> int:  # pragma: no cover
-        """ number of services
-        """
-        return len(self.services)
 
-    def get_n_engineers(self) -> int:  # pragma: no cover
-        """It returns the number of engineers
-        """
-        return len(self.engineers)   
 
 class Feature:
     def __init__(self, services: list, users: int, difficulty: int, name: str) -> None:
